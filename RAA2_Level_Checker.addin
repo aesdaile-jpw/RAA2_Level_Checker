@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>RAA2_Level_Checker - Command 1</Text>
+    <Description>Some description</Description>
+    <Assembly>RAA2_Level_Checker\RAA2_Level_Checker.dll</Assembly>
+    <FullClassName>RAA2_Level_Checker.Command1</FullClassName>
+    <ClientId>b70da30d-54bb-4c28-a810-777bfd6b433e</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+  <AddIn Type="Command">
+    <Text>RAA2_Level_Checker - Command 2</Text>
+    <Description>Some description</Description>
+    <Assembly>RAA2_Level_Checker\RAA2_Level_Checker.dll</Assembly>
+    <FullClassName>RAA2_Level_Checker.Command2</FullClassName>
+    <ClientId>1384b7dc-6022-419d-b077-58eaf94cb6f1</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>RAA2_Level_Checker</Name>
+    <Assembly>RAA2_Level_Checker\RAA2_Level_Checker.dll</Assembly>
+    <FullClassName>RAA2_Level_Checker.App</FullClassName>
+    <ClientId>9e4662b3-e4c2-47e7-9b32-c1ce6c8f1567</ClientId>
+    <VendorId>com.YOUR COMPANY NAME</VendorId>
+    <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
+  </AddIn>
+</RevitAddIns>
