@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RevitAddIns>
-  <AddIn Type="Command">
+  <!--<AddIn Type="Command">
     <Text>RAA2_Level_Checker - Command 1</Text>
     <Description>Some description</Description>
     <Assembly>RAA2_Level_Checker\RAA2_Level_Checker.dll</Assembly>
@@ -17,7 +17,7 @@
     <ClientId>1384b7dc-6022-419d-b077-58eaf94cb6f1</ClientId>
     <VendorId>com.YOUR COMPANY NAME</VendorId>
     <VendorDescription>YOUR COMPANY NAME, YOUR COMPANY URL</VendorDescription>
-  </AddIn>
+  </AddIn>-->
   <AddIn Type="Application">
     <Name>RAA2_Level_Checker</Name>
     <Assembly>RAA2_Level_Checker\RAA2_Level_Checker.dll</Assembly>
