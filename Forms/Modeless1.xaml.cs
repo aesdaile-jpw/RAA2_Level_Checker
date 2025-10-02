@@ -19,9 +19,16 @@ namespace RAA2_Level_Checker.Forms
     /// </summary>
     public partial class Modeless1 : Window
     {
-        public Modeless1()
+        ExternalEvent myEvent;
+        public Modeless1(ExternalEvent _Event)
         {
             InitializeComponent();
+            this.myEvent = _Event;
+        }
+
+        private void btnApply_Click(object sender, RoutedEventArgs e)
+        {
+            myEvent.Raise();
         }
     }
 }
