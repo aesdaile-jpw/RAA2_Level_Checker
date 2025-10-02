@@ -5,37 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RAA2_Level_Checker.Forms"
         mc:Ignorable="d"
-        Title="JPW Utilities: Level Checker" Height="600" Width="400" ResizeMode="NoResize">
+        Title="JPW Utilities: Level Checker" Height="600" Width="400">
+    <Window.Resources>
+        <Style TargetType="CheckBox">
+            <Setter Property="Margin" Value="10,5,0,0" />
+        </Style>
+    </Window.Resources>
     <Grid Margin="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="70"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Label x:Name="label" Content="Level Checker" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" FontFamily="Arial Rounded MT Bold" FontSize="36"/>
         <Label x:Name="label1" Content="Select Level to check:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
         <Label x:Name="label2" Content="Highlight mode:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Center"/>
-        <Label x:Name="label3" Content="Select Category to check:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="5" VerticalAlignment="Center"/>
-        <ComboBox x:Name="cmbLevel" DisplayMemberPath="Name" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Margin="10,5,0,0" Width="355"/>
+        <Label x:Name="label3" Content="Select Category to check:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="6" VerticalAlignment="Center"/>
+        <ComboBox x:Name="cmbLevel" DisplayMemberPath="Name" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Margin="10,5,0,0" Width="352"/>
         <RadioButton x:Name="rdbColour" Content="Set Colour" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Margin="15,5,0,0" GroupName="Colour" IsChecked="True"/>
         <RadioButton x:Name="rdbReset" Content="Reset Colour NOTE: resets all overrides" HorizontalAlignment="Left" Margin="114,5,0,0" Grid.Row="4" VerticalAlignment="Top" GroupName="Colour"/>
-        <StackPanel x:Name="stackPanel" Grid.Row="6" Orientation="Vertical" VerticalAlignment="Top">
-            <CheckBox x:Name="chkWalls" Content="Walls" Margin="10,5,0,0"/>
-            <CheckBox x:Name="chkFloors" Content="Floors" Margin="10,5,0,0"/>
-            <CheckBox x:Name="chkRoofs" Content="Roofs" Margin="10,5,0,0"/>
-            <CheckBox x:Name="chkCeilings" Content="Ceilings" Margin="10,5,0,0"/>
-            <CheckBox x:Name="chkDoors" Content="Doors" Margin="10,5,0,0"/>
-            <CheckBox x:Name="chkWindows" Content="Windows" Margin="10,5,0,0"/>
-            <CheckBox x:Name="chkColumns" Content="Columns" Margin="10,5,0,0"/>
-            <CheckBox x:Name="chkStructuralFraming" Content="Structural Framing" Margin="10,5,0,0"/>
-            <CheckBox x:Name="chkFurniture" Content="Furniture" Margin="10,5,0,0"/>
-            <CheckBox x:Name="chkCasework" Content="Casework" Margin="10,5,0,0"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Margin="5,0,0,0">
+            <RadioButton x:Name="rdbRed" Content="Red" Margin="10,5,0,0" GroupName="Colour2" IsChecked="True"/>
+            <RadioButton x:Name="rdbGreen" Content="Green" Margin="10,5,0,0" GroupName="Colour2"/>
+            <RadioButton x:Name="rdbBlue" Content="Blue" Margin="10,5,0,0" GroupName="Colour2"/>
+            <RadioButton x:Name="rdbYellow" Content="Yellow" Margin="10,5,0,0" GroupName="Colour2"/>
+        </StackPanel>
+        <StackPanel x:Name="stackPanel" Grid.Row="7" Orientation="Vertical" VerticalAlignment="Top">
+            <CheckBox x:Name="chkWalls" Content="Walls" />
+            <CheckBox x:Name="chkFloors" Content="Floors" />
+            <CheckBox x:Name="chkRoofs" Content="Roofs" />
+            <CheckBox x:Name="chkCeilings" Content="Ceilings" />
+            <CheckBox x:Name="chkDoors" Content="Doors" />
+            <CheckBox x:Name="chkWindows" Content="Windows" />
+            <CheckBox x:Name="chkColumns" Content="Columns" />
+            <CheckBox x:Name="chkStructuralFraming" Content="Structural Framing" />
+            <CheckBox x:Name="chkFurniture" Content="Furniture" />
+            <CheckBox x:Name="chkCasework" Content="Casework" />
             <CheckBox x:Name="chkSpecialityEquipment" Content="Speciality Equipment" Margin="10,5,0,0"/>
-            <Button x:Name="btnApply" Content="Apply" HorizontalAlignment="Center" Margin="10,10,0,0" Width="100" Click="btnApply_Click"/>
+            <Button x:Name="btnApply" Content="Apply" HorizontalAlignment="Center" Margin="10,10,0,0" Width="100" Click="btnApply_Click" VerticalAlignment="Bottom"/>
         </StackPanel>
     </Grid>
 </Window>

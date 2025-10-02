@@ -57,7 +57,21 @@ namespace RAA2_Level_Checker.Forms
             Globals.ChkCasework = (bool)chkCasework.IsChecked;
             Globals.ChkSpecialityEquipment = (bool)chkSpecialityEquipment.IsChecked;
 
+            SetColour();
+
             myEvent.Raise();
+        }
+
+        private void SetColour()
+        {
+            if (rdbColour.IsChecked == true)
+                Globals.ColourToSet = new Color(255,0,0);
+            if (rdbGreen.IsChecked == true)
+                Globals.ColourToSet = new Color(0, 255, 0);
+            if (rdbBlue.IsChecked == true)
+                Globals.ColourToSet = new Color(0, 0, 255);
+            if (rdbYellow.IsChecked == true)
+                Globals.ColourToSet = new Color(255, 255, 0);
         }
     }
 }

@@ -125,7 +125,7 @@ namespace RAA2_Level_Checker
                 TaskDialog.Show("Error", "Could not find 'Solid fill' pattern.");
                 return;
             }
-            ogs.SetSurfaceForegroundPatternColor(new Color(255, 0, 0)); // Red
+            ogs.SetSurfaceForegroundPatternColor(Globals.ColourToSet);
             ogs.SetSurfaceForegroundPatternId(solidFill.Id);
             using (Transaction t = new Transaction(doc))
             {
