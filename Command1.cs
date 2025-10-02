@@ -100,10 +100,6 @@ namespace RAA2_Level_Checker
                 return;
             }
 
-            //FilteredElementCollector collector2 = new FilteredElementCollector(doc, doc.ActiveView.Id);
-            //collector2.Cast<Element>().Where<Element>(e =>
-            //(Globals.ChkWalls && e is Wall) && (e.LevelId == Globals.LevelToSet.Id));
-
             var collector2 = new FilteredElementCollector(doc, doc.ActiveView.Id)
                 .WhereElementIsNotElementType()
                 .WherePasses(new ElementLevelFilter(Globals.LevelToSet.Id))
@@ -120,8 +116,6 @@ namespace RAA2_Level_Checker
                     (Globals.ChkCasework && e is FamilyInstance fi6 && fi6.Category.Id.IntegerValue == (int)BuiltInCategory.OST_Casework) ||
                     (Globals.ChkSpecialityEquipment && e is FamilyInstance fi7 && fi7.Category.Id.IntegerValue == (int)BuiltInCategory.OST_SpecialityEquipment)
                 );
-
-            ElementCategoryFilter wallFilter = new ElementCategoryFilter(BuiltInCategory.OST_Walls);
 
             List<Element> levelElements = collector2.Cast<Element>().ToList();
             OverrideGraphicSettings ogs = new OverrideGraphicSettings();
@@ -158,38 +152,4 @@ namespace RAA2_Level_Checker
             return curFPE;
         }
     }
-
-    public class EventAction2 : IExternalEventHandler
-    {
-        public void Execute(UIApplication uiapp)
-        {
-            UIDocument uidoc = uiapp.ActiveUIDocument;
-            Document doc = uidoc.Document;
-            // Your code goes here
-            // get all elements in view
-            FilteredElementCollector collector = new FilteredElementCollector(doc, doc.ActiveView.Id);
-            List<Element> viewElements = collector.Cast<Element>().ToList();
-
-            OverrideGraphicSettings newSettings = new OverrideGraphicSettings();
-
-            using (Transaction t = new Transaction(doc))
-            {
-                t.Start("Reset elements");
-
-                foreach (Element curElem in viewElements)
-                {
-                    doc.ActiveView.SetElementOverrides(curElem.Id, newSettings);
-                }
-
-                t.Commit();
-                t.Dispose();
-            }
-
-        }
-        public string GetName()
-        {
-            return "Level Checker Modeless Form Reset Colour";
-        }
-    }
-
 }
