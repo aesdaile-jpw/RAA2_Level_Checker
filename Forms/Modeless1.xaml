@@ -26,7 +26,7 @@
         <Label x:Name="label1" Content="Select Level to check:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
         <Label x:Name="label2" Content="Highlight mode:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Center"/>
         <Label x:Name="label3" Content="Select Category to check:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="6" VerticalAlignment="Center"/>
-        <ComboBox x:Name="cmbLevel" DisplayMemberPath="Name" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Margin="10,5,0,0" Width="352"/>
+        <ComboBox x:Name="cmbLevel" DisplayMemberPath="Name" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Margin="10,5,0,0" Width="352" SelectedIndex="0"/>
         <RadioButton x:Name="rdbColour" Content="Set Colour" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Margin="15,5,0,0" GroupName="Colour" IsChecked="True"/>
         <RadioButton x:Name="rdbReset" Content="Reset Colour NOTE: resets all overrides" HorizontalAlignment="Left" Margin="114,5,0,0" Grid.Row="4" VerticalAlignment="Top" GroupName="Colour"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Margin="5,0,0,0">
