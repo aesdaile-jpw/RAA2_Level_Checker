@@ -22,7 +22,7 @@
         <Label x:Name="label3" Content="Select Category to check:" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="5" VerticalAlignment="Center"/>
         <ComboBox x:Name="cmbLevel" DisplayMemberPath="Name" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Margin="10,5,0,0" Width="355"/>
         <RadioButton x:Name="rdbColour" Content="Set Colour" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Margin="15,5,0,0" GroupName="Colour" IsChecked="True"/>
-        <RadioButton x:Name="rdbReset" Content="Reset Colour" HorizontalAlignment="Left" Margin="114,5,0,0" Grid.Row="4" VerticalAlignment="Top" GroupName="Colour"/>
+        <RadioButton x:Name="rdbReset" Content="Reset Colour NOTE: resets all overrides" HorizontalAlignment="Left" Margin="114,5,0,0" Grid.Row="4" VerticalAlignment="Top" GroupName="Colour"/>
         <StackPanel x:Name="stackPanel" Grid.Row="6" Orientation="Vertical" VerticalAlignment="Top">
             <CheckBox x:Name="chkWalls" Content="Walls" Margin="10,5,0,0"/>
             <CheckBox x:Name="chkFloors" Content="Floors" Margin="10,5,0,0"/>
