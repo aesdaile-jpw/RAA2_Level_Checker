@@ -118,6 +118,7 @@ namespace RAA2_Level_Checker
                 );
 
             List<Element> levelElements = collector2.Cast<Element>().ToList();
+
             OverrideGraphicSettings ogs = new OverrideGraphicSettings();
             FillPatternElement solidFill = GetFillPatternByName(doc, "<Solid fill>");
             if (solidFill == null)
@@ -125,8 +126,12 @@ namespace RAA2_Level_Checker
                 TaskDialog.Show("Error", "Could not find 'Solid fill' pattern.");
                 return;
             }
+
             ogs.SetSurfaceForegroundPatternColor(Globals.ColourToSet);
+            ogs.SetCutForegroundPatternColor(Globals.ColourToSet);
             ogs.SetSurfaceForegroundPatternId(solidFill.Id);
+            ogs.SetCutForegroundPatternId(solidFill.Id);
+
             using (Transaction t = new Transaction(doc))
             {
                 t.Start("Override elements");
