@@ -29,4 +29,21 @@ namespace RAA2_Level_Checker
         public static bool ChkCasework;
         public static bool ChkSpecialityEquipment;
     }
+
+    public class EventForm
+    {
+        public Level LevelToSet { get; set; }
+        public bool SetColour { get; set; }
+        public bool ChkWalls { get; set; }
+        public bool ChkFloors { get; set; }
+        public bool ChkRoofs { get; set; }
+        public bool ChkCeilings { get; set; }
+        public bool ChkDoors { get; set; }
+        public bool ChkWindows { get; set; }
+        public bool ChkColumns { get; set; }
+        public bool ChkStructuralFraming { get; set; }
+        public bool ChkFurniture { get; set; }
+        public bool ChkCasework { get; set; }
+        public bool ChkSpecialityEquipment { get; set; }
+    }
 }

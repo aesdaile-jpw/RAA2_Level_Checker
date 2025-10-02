@@ -2,6 +2,7 @@
 global using System;
 global using System.Diagnostics;
 global using System.IO;
+global using System.Linq;
 global using System.Reflection;
 global using Autodesk.Revit.Attributes;
 global using Autodesk.Revit.DB;
